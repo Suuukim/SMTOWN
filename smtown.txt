@@ -1,0 +1,70 @@
+--SMTOWN 홈페이지 만들기
+--
+--물리 모델링
+--1. USER_tbl
+--------------------------------------------------------------
+--userid vharchar2(50)	회원		PK
+-------------------------------------------------------------- 
+--userpw varchar2(100)	비밀번호
+--age	number(3)		나이
+--phone varchar2(50)	휴대폰번호
+--addr	 varchar2(100) 	이메일주소
+--gender vharchar2(10)	성별
+--
+--2. ADMIN_tbl
+--------------------------------------------------------------
+--adminid varchar2(50)		관리자		PK
+-------------------------------------------------------------- 
+--adminpw varchar2(100)		비밀번호
+--
+--3. ACTOR_tbl
+--------------------------------------------------------------
+--actid varchar2(50)	배우코드		PK
+-------------------------------------------------------------- 
+--actid vharchar2(10) 				배우이름
+--actbirth varchar2(20)				생일
+--actdebut	varchar2(50) 			데뷔
+--dateactivities	varchar2(20) 	활동작품년도
+--activities	varchar2(200) 		활동내용
+--
+--4. MUSICIAN_tbl
+--------------------------------------------------------------
+--musicianid vharchar2(50) 	가수코드		PK
+-------------------------------------------------------------- 
+--musicianname varchar2(50) 		그룹명
+--membername vahrchar2(50)		멤버이름		 	FK(member_tbl)
+--msdactivities varchar2(20)		활동작품년도
+--msactivities varchar2(200) 		활동내용
+--discography varchar2(100) 		앨범				FK(album_tbl)
+--
+--5. member_tbl
+--------------------------------------------------------------
+--memberid varchar2(50)		멤버코드		PK
+--------------------------------------------------------------
+--membername varchar2(50)		멤버이름
+--musicianname varchar2(50)		그룹명		FK(MUSICIAN_tbl)
+--memberbirth varchar2(20)		생일
+--memberbut vahrchar2(50)		데뷔
+--mbdactivities varchar2(200)	활동년도
+--mbactivities varchar2(100)	활동내용
+--discography varchar2(100)		앨범			FK(album_tbl)
+--
+--6.album_tbl
+--------------------------------------------------------------
+--albumid varchar2(50)		앨범코드		PK
+--------------------------------------------------------------
+--discography varchar2(100)		앨범			
+--albumartist varchar2(100) 	아티스트
+--albumtype varchar2(50)		엘밤정류
+--albumgenre varchar2(100)		앨범장르
+--albumlabel varchar2(50)		음반사
+--albumpublishing varchar2(100)	발매사
+--albumreleasedate varchar2(50)	발매일
+--albumnotes longtext			앨범설명
+
+--7.tracklist_tbl
+--------------------------------------------------------------
+--trackid varchar2(50)		트랙코드		PK
+--------------------------------------------------------------
+--songname varchar2(100)  	곡 이름
+
