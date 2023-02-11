@@ -49,7 +49,7 @@ create table member_tbl(
 
 create table album_tbl(
 	albumid varchar2(50),
-	discography varchar2(100) not null,
+	discography varchar2(100) unique,
 	albumtype varchar2(50),
 	albumgenre varchar2(100),
 	albumlabel varchar2(50),
