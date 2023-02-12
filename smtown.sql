@@ -29,11 +29,13 @@ create table musician_tbl(
 	memberid varchar2(50),
 	msdactivities varchar2(20),
 	msactivities varchar2(200),
-	albumid varchar2(100),
+	discography varchar2(100) unique,
 	primary key (musicianid),
 	foreign key (memberid) references member_tbl(memberid),
-	foreign key (albumid) references album_tbl(albumid)
+	foreign key (discography) references album_tbl(discography)
 );
+
+drop table musician_tbl;
 
 create table member_tbl(
 	memberid varchar2(50),
@@ -42,10 +44,12 @@ create table member_tbl(
 	memberbut varchar2(50),
 	mbdactivities varchar2(200),
 	mbactivities varchar2(100),
-	albumid varchar2(100),
+	discography varchar2(100) unique,
 	primary key (memberid),
-	foreign key (albumid) references album_tbl(albumid)
+	foreign key (discography) references album_tbl(discography)
 );
+
+drop table member_tbl;
 
 create table album_tbl(
 	albumid varchar2(50),
