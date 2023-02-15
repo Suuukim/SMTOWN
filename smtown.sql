@@ -64,3 +64,5 @@ create table album_tbl(
 );
 
 drop table ALBUM_TBL;
+
+SELECT ALBUMID FROM ALBUM_TBL ;
